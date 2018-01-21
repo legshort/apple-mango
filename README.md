@@ -1,4 +1,4 @@
-# Light wieght BDD Pattern
+# Light weight BDD Pattern
 
 ## Installation
 * `pip install git+https://github.com/legshort/mango`
