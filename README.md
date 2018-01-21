@@ -1,7 +1,7 @@
 # Light wieght BDD Pattern
 
 ## Installation
-* pip install git+https://github.com/legshort/mango
+* `pip install git+https://github.com/legshort/mango`
 * Uploading to pypi in on WIP(got stuck due to email typo)
 
 ## Goal
@@ -9,6 +9,11 @@
 * Compatible with Python unittest
 * Compatible with existing test code
 * Support Python3
+
+## Next Step
+* Register to pypi
+* Add CI
+* Support pytest
 
 ## Usage
 * Define regular test class
@@ -18,12 +23,7 @@
 * Run python test: `python -m unittest test_file.py`
 * No need to call inner `when` and `then` method becuase `given(), when(), then()` decorators will take care of it
 
-## Next Step
-* Register to pypi
-* Add CI
-* Support pytest
-
-## Example
+### Example
 ```python
 # test_exampel.py
 
@@ -77,12 +77,14 @@ class MangoUseCase(TestCase):
 
 ```
 
-## Run Example
+### Run Example
 ```python
 python -m unittest test_example.py
 ```
 
-## Run Test
+## Contributing
+
+### Run Test
 ```python
 python -m unittest tests/test_mango.py
 ```
