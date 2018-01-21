@@ -10,7 +10,7 @@ setup(
     license='MIT',
     author='Jun Young Lee',
     author_email='legshort@gmail.com',
-    description='Light wieght BDD Pattern',
+    description='Light weight BDD Pattern',
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
