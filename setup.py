@@ -1,7 +1,7 @@
 import os
 import sys
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='mango',
@@ -16,6 +16,6 @@ setup(
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: BSD License',
     ],
-    packages=find_packages(exclude=['tests']),
+    packages=['mango'],
     long_description=open('README.md').read(),
 )
