@@ -19,6 +19,6 @@ setup(
     packages=['mango'],
     install_requires=[
         'wrapt>=1.10.0',
-    ]
+    ],
     long_description=open('README.md').read(),
 )
