@@ -1,7 +1,7 @@
 # Light weight BDD Pattern
 
 ## Installation
-* `pip install git+https://github.com/legshort/mango`
+* `pip install -e git://github.com/legshort/mango#egg=mango`
 * Uploading to pypi in on WIP(got stuck due to email typo)
 
 ## Goal
