@@ -16,7 +16,7 @@ setup(
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: BSD License',
     ],
-    keywords=['tdd', 'bdd', 'test']
+    keywords=['tdd', 'bdd', 'test'],
     packages=['mango'],
     install_requires=[
         'wrapt>=1.10.0',
