@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='mango',
-    version='0.0.1',
+    version='0.1',
     url='https://github.com/legshort/mango/',
     license='MIT',
     author='Jun Young Lee',
@@ -16,6 +16,7 @@ setup(
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: BSD License',
     ],
+    keywords=['tdd', 'bdd', 'test']
     packages=['mango'],
     install_requires=[
         'wrapt>=1.10.0',
