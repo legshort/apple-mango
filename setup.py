@@ -4,9 +4,9 @@ import sys
 from setuptools import setup
 
 setup(
-    name='mango',
+    name='apple-mango',
     version='0.1',
-    url='https://github.com/legshort/mango/',
+    url='https://github.com/legshort/apple-mango/',
     license='MIT',
     author='Jun Young Lee',
     author_email='legshort@gmail.com',
