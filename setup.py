@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='apple-mango',
-    version='0.1',
+    version='0.2',
     url='https://github.com/legshort/apple-mango/',
     license='MIT',
     author='Jun Young Lee',
