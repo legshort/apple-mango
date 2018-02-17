@@ -1,7 +1,7 @@
 from collections import defaultdict
 from unittest import TestCase
 
-from mango import mango
+from apple_mango import mango
 
 
 class BDDTestCase(TestCase):

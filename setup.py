@@ -17,7 +17,7 @@ setup(
         'License :: OSI Approved :: BSD License',
     ],
     keywords=['tdd', 'bdd', 'test'],
-    packages=['mango'],
+    packages=['apple_mango'],
     install_requires=[
         'wrapt>=1.10.0',
     ],
