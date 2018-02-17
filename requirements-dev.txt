@@ -1,1 +1,2 @@
+parameterized==0.6.1
 wrapt==1.10.11

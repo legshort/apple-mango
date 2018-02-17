@@ -1,6 +1,8 @@
 from collections import defaultdict
 from unittest import TestCase
 
+from parameterized import parameterized
+
 from apple_mango import mango
 
 
@@ -120,3 +122,42 @@ class BDDTestCase(TestCase):
 
         self.assertFalse(mango.whens)
         self.assertFalse(mango.thens)
+
+
+class ParameterizedTestCase(TestCase):
+    TEST_PARAMETER = ['param_1', 'param_2', 'param_3']
+
+    @classmethod
+    def setUpClass(cls):
+        cls._given_data = []
+        cls._when_data = []
+        cls._then_data = []
+
+    @parameterized.expand(TEST_PARAMETER)
+    @mango.given('add parameterized')
+    def test(self, param):
+        self.given.param = param
+        self._given_data.append(param)
+
+        @mango.when('run test')
+        def when():
+            self.assertEqual(param, self.given.param)
+            self.when.param = param
+
+            self._when_data.append(param)
+
+            @mango.then('successfully run with parametrized')
+            def then():
+                self.assertEqual(param, self.given.param)
+                self.assertEqual(param, self.when.param)
+
+                self._then_data.append(param)
+
+    def tearDown(self):
+        self.assertListEqual(self._given_data, self._when_data, self._then_data)
+
+    @classmethod
+    def tearDownClass(cls):
+        assert 3 == len(cls._given_data)
+        assert 3 == len(cls._when_data)
+        assert 3 == len(cls._then_data)
