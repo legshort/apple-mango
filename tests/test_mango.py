@@ -1,5 +1,5 @@
-from unittest import TestCase
 from collections import defaultdict
+from unittest import TestCase
 
 from mango import mango
 
@@ -89,6 +89,14 @@ class BDDTestCase(TestCase):
                 self.assertEqual(self.given.status_code, 401)
                 self.then_call_stack[self.given.name][self.when.name].append(
                     'I see 401 error')
+
+    @mango.given()
+    def test_default_given_desc(self):
+        @mango.when()
+        def when():
+            @mango.then()
+            def then():
+                pass
 
     def tearDown(self):
         # assert bdd module
