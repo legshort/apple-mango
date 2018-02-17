@@ -10,7 +10,7 @@ class Emtpy:
     pass
 
 
-def given(desc):
+def given(desc=''):
 
     @wrapt.decorator
     def wrapper(wrapped, instance, args, kwargs):
@@ -39,15 +39,15 @@ def given(desc):
     return wrapper
 
 
-def when(desc):
+def when(desc=''):
 
     def decorate(func):
         whens.append((func, desc,))
     return decorate
 
 
-def then(desc):
-    
+def then(desc=''):
+
     def decorate(func):
         thens.append((func, desc,))
     return decorate
@@ -55,7 +55,7 @@ def then(desc):
 
 def call_when(instance, func, desc):
     verbose('When:', desc)
-    
+
     result = func()
 
     global thens
