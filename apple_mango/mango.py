@@ -1,5 +1,7 @@
 from functools import wraps
 import sys
+from unittest import TestCase
+
 import wrapt
 
 whens = []
@@ -16,6 +18,10 @@ def given(desc=''):
     def wrapper(wrapped, instance, args, kwargs):
         nonlocal desc
         verbose('\nGiven:', desc)
+
+        if args and isinstance(args[0], TestCase):
+            instance = args[0]
+
         clear(instance)
 
         result = wrapped(*args, **kwargs)
